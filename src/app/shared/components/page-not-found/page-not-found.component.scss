@@ -1,0 +1,34 @@
+@import "../../../../assets/css/variables";
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error-img {
+    background: url("/assets/images/pnf.svg");
+    height: 400px;
+    width: 672px;
+    display: inline-block;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.error-text {
+    @include first-bold-font;
+    margin-left: 6px;
+}
+
+.info-msg {
+    text-align: center;
+}
+
+.error {
+    background: $primary-color;
+    color: $white-color;
+    margin: 0 10px;
+}
