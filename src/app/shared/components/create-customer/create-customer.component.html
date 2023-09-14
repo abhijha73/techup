@@ -1,1 +1,56 @@
-<p>create-customer works!</p>
+<div class="header-and-close">
+    <div>
+        <span>Add Customer</span>
+    </div>
+    <div>
+        <button (click)="closeDialogue()" mat-stroked-button>Close</button>
+    </div>
+</div>
+<div class="container">
+    <div *ngIf="!created">
+        <form [formGroup]="customerForm">
+            <div class="input-part">
+                <mat-form-field style="width: 100%;" class="_custom-mat-input">
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput formControlName="name" required>
+                </mat-form-field>
+            </div>
+            <div class="input-part">
+                <mat-form-field style="width: 100%;" class="_custom-mat-input">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput formControlName="email" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Region</mat-label>
+                    <mat-select formControlName="region" (selectionChange)="getCountryList($event)">
+                        <mat-option *ngFor="let region of regionList" [value]="region">
+                            {{region}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Country</mat-label>
+                    <mat-select formControlName="country">
+                        <mat-option *ngFor="let country of countryList" [value]="country.country">
+                            {{country.country}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button [class.opacity-half]="!customerForm.valid" class="general-button"
+                    (click)="submitCustomerDetails()" mat-stroked-button [disabled]="!customerForm.valid"> Create
+                    Customer
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="_mt-12 second-normal-font" style="margin-top: 100px !important; text-align: center; min-height: 150px;"
+        *ngIf="created">
+        Customer Created Successfully !!
+    </div>
+</div>

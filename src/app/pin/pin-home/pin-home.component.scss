@@ -1,5 +1,38 @@
+@import '../../../assets/css/variables';
+
 .container {
     height: 100vh;
-    width: 100vw;
-    background-color: aqua;
+    width: 1024px;
+    padding: 20px 0px;
+}
+
+.header {
+    @include second-normal-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general-button {
+    background: $button-bg;
+    padding: 5px 10px;
+    margin-left: 12px !important;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
 }

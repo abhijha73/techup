@@ -5,8 +5,6 @@
     </div>
     <div class="error-img"></div>
     <div class="info-msg">
-        <button class="error" mat-button (click)="goBack()">Go Back</button>
-
-        or <button class="error" mat-button (click)="goHome()">Home</button>
+        <button class="error" mat-button [routerLink]="['/pin']">Home</button>
     </div>
 </div>

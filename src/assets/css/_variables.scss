@@ -1,16 +1,15 @@
-$app-bg-color: #FFFFFF;
-$folder-list-bg-color: #F5F8FA;
-$thread-list-bg-color: #F9FAF5;
+$app-bg-color: #F8F8F9;
 $highlight-color: #1FB5EB;
 $text-color: #333333;
 $primary-color: #F0CAFB;
 $white-color: #FFFFFF;
 $black-color: black;
-$grey-color: #33333380;
+$button-bg: #C2C2C4;
 
 @mixin first-normal-font {
     font-size: 24px;
     line-height: 32px;
+    font-weight: 400;
 }
 @mixin first-bold-font {
     font-weight: bold;
@@ -20,6 +19,7 @@ $grey-color: #33333380;
 @mixin second-normal-font {
     font-size: 20px;
     line-height: 27px;
+    font-weight: 400;
 }
 @mixin second-bold-font {
     font-weight: bold;
@@ -29,6 +29,7 @@ $grey-color: #33333380;
 @mixin third-normal-font {
     font-size: 16px;
     line-height: 24px;
+    font-weight: 400;
 }
 @mixin third-bold-font {
     font-weight: bold;

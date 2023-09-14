@@ -11,6 +11,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { NgxSelectModule } from 'ngx-select-ex';
 import { FileUploadModule } from 'ng2-file-upload';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     MatInputModule,
     NgxSelectModule,
     FileUploadModule,
+    MatDialogModule,
+    MatSelectModule,
+    HttpClientModule
   ],
   exports: [
     MatButtonModule,
@@ -38,6 +44,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
+    MatSelectModule,
+    HttpClientModule
   ],
 })
 export class SharedModule {}
