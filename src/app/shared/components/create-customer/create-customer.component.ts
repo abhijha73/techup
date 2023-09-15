@@ -58,6 +58,6 @@ export class CreateCustomerComponent implements OnInit {
     this.created = true;
     setTimeout(() => {
       this.dialogRef.close();
-    }, 1500);
+    }, 1000);
   }
 }

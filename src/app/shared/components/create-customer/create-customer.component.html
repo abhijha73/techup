@@ -1,6 +1,6 @@
 <div class="header-and-close">
     <div>
-        <span>Add Customer</span>
+        Add Customer
     </div>
     <div>
         <button (click)="closeDialogue()" mat-stroked-button>Close</button>
@@ -9,13 +9,13 @@
 <div class="container">
     <div *ngIf="!created">
         <form [formGroup]="customerForm">
-            <div class="input-part">
+            <div>
                 <mat-form-field style="width: 100%;" class="_custom-mat-input">
                     <mat-label>Name</mat-label>
                     <input type="text" matInput formControlName="name" required>
                 </mat-form-field>
             </div>
-            <div class="input-part">
+            <div>
                 <mat-form-field style="width: 100%;" class="_custom-mat-input">
                     <mat-label>Email</mat-label>
                     <input type="text" matInput formControlName="email" required>

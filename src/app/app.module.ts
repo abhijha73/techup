@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiInterceptor } from './shared/services/api.interceptor';
+import { NgxSelectModule } from 'ngx-select-ex';
 
 @NgModule({
   declarations: [AppComponent],

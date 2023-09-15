@@ -16,16 +16,26 @@
                     <th>Privacy</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 4</td>
-                </tr>
-                
-            </tbody>
+            <ng-container *ngIf="allPinList.length">
+                <tbody *ngFor="let pin of allPinList">
+                    <tr>
+                        <td>{{pin.title}}</td>
+                        <td> <img class="pin-image" [src]="pin.imgData" onerror="this.src='assets/images/sample-placeholder.jpg'" />
+                        </td>
+                        <td>
+                            <div *ngFor="let name of pin.collaboratory">{{name}}</div>
+                        </td>
+                        <td>{{pin.privacy}}</td>
+                    </tr>
+                </tbody>
+            </ng-container>
         </table>
+        <ng-container *ngIf="!allPinList.length">
+            <div class="second-normal-font" style="margin-top: 50px !important; text-align: center; width: 100%;">
+                <div>Sorry, seems no pin created...!!</div>
+                <div>Please start with creating customer.</div>
+            </div>
+        </ng-container>
     </div>
 
 </div>

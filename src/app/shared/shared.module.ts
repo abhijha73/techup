@@ -14,6 +14,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FileUploadModule,
     MatDialogModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
   ],
   exports: [
     MatButtonModule,
@@ -46,7 +48,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatDialogModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
   ],
 })
 export class SharedModule {}

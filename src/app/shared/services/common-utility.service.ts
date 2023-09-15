@@ -12,7 +12,11 @@ export class CommonUtilityService {
   availablePinList = this.pinListSubject.asObservable();
   constructor(private ls: LocalStorageService) {
     let customerListArr = this.ls.getCustomerList();
-    this.customerListSubject.next(JSON.parse(customerListArr));
+    let pinListArr = this.ls.getPinList();
+    this.customerListSubject.next(
+      customerListArr ? JSON.parse(customerListArr) : []
+    );
+    this.pinListSubject.next(pinListArr ? JSON.parse(pinListArr) : []);
   }
 
   getCurrentCustomerList(): Observable<any> {
@@ -29,6 +33,19 @@ export class CommonUtilityService {
   }
   setCurrentPinList(obj: any) {
     let currentList = this.pinListSubject.value;
-    debugger;
+    currentList.push(obj);
+    this.ls.savePinList(currentList);
+    this.pinListSubject.next(currentList);
+  }
+  getBase64(file: any) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+    return reader.result;
   }
 }
